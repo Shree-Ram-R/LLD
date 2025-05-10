@@ -79,7 +79,15 @@ public class Main {
 			    parkingLot = createParkingLot(parkingLotId, noOfFloors, noOfSlots); 
 			    break;
 
-				
+			case 6:
+				System.out.println("     Customer Details   ");
+				for( Customer customer:customerList) {
+					System.out.println("Name : "+customer.getName());
+					System.out.println("Phone Number : "+customer.getPhoneNumber());
+					System.out.println("Vechicle No : "+customer.cusVehicle.getVehicleNo());
+					System.out.println("Vechicle Type : "+customer.cusVehicle.getVehicleType());
+					System.out.println("Color : "+customer.cusVehicle.getColor());
+				}
 		    default:
 		    	break;
 			}
@@ -107,8 +115,10 @@ public class Main {
 		System.out.println("Park Vehicle     	  3 ");
 		System.out.println("Unpark Vehicle  	  4 ");
 		System.out.println("Create Parking Lot	  5 ");
+		System.out.println("Display Customers	  6 ");
 		System.out.println("Exit             	  0 ");
 	}
+	
 	public static void showSlotType() {
 		System.out.println("Slot Type         Key");
 		System.out.println("Bike               1 ");
